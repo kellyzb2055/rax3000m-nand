@@ -19,6 +19,7 @@
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 #sed -i 's/ImmortalWrt/RAX3000M/g' package/base-files/files/bin/config_generate
+#sed -i "s/hostname='.*'/hostname='RAX3000M'/g" package/base-files/files/bin/config_generate
 
 #修改wifi名称（mtwifi-cfg）
 #sed -i 's/ImmortalWrt-2.4G/NETGEAR92/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
