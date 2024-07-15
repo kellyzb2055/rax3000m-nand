@@ -25,8 +25,19 @@
 #sed -i 's/ImmortalWrt-2.4G/NETGEAR92/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
 #sed -i 's/ImmortalWrt-5G/NETGEAR92-5G/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
 
+##修改wifi名称（旧）
+#sed -i "s/MT7981_AX3000_2.4G/NETGEAR92/g" package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b0.dat
+#sed -i "s/MT7981_AX3000_5G/NETGEAR92-5G/g" package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b1.dat
+
 #删除冲突的软件包
 #rm -rf ./package/istore
 #rm -rf ./feeds/kenzo/luci-app-quickstart
 #rm -rf ./feeds/kenzo/luci-app-store
 #rm -rf ./feeds/kenzo/luci-lib-taskd
+
+##加入作者信息
+#sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='BING-$(date +%Y%m%d)'/g"  package/base-files/files/etc/openwrt_release
+#sed -i "s/DISTRIB_REVISION='*.*'/DISTRIB_REVISION=' By BING'/g" package/base-files/files/etc/openwrt_release
+#sed -i "2iuci set istore.istore.channel='BING'" package/emortal/default-settings/files/99-default-settings
+#sed -i "3iuci commit istore" package/emortal/default-settings/files/99-default-settings
+#sed -i.bak "s,mirrors.vsean.net/openwrt,mirrors.vsean.net/openwrt,g" package/emortal/default-settings/files/99-default-settings
