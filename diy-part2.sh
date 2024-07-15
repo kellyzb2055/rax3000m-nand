@@ -18,3 +18,14 @@
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+#sed -i 's/ImmortalWrt/RAX3000M/g' package/base-files/files/bin/config_generate
+
+#修改wifi名称（mtwifi-cfg）
+#sed -i 's/ImmortalWrt-2.4G/NETGEAR92/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
+#sed -i 's/ImmortalWrt-5G/NETGEAR92-5G/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
+
+#删除冲突的软件包
+#rm -rf ./package/istore
+#rm -rf ./feeds/kenzo/luci-app-quickstart
+#rm -rf ./feeds/kenzo/luci-app-store
+#rm -rf ./feeds/kenzo/luci-lib-taskd
